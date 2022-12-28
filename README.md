@@ -35,3 +35,5 @@
 
 
 ```
+
+Once done then in terminal do `npx sequelize db:create`
