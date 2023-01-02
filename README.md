@@ -37,3 +37,37 @@
 ```
 
 Once done then in terminal do `npx sequelize db:create`
+
+## DB DESIGN
+
+- Airplane table
+
+  - Id
+  - model_number
+  - capacity
+  - created_at
+  - updated_at
+
+- Flight table
+
+  - id
+  - departure_city_id
+  - destination_city \_id
+
+  - airplane_id
+  - departure
+  - arrival
+  - flight number
+  - Airport_id
+
+- Airport
+
+  - id
+  - name
+  - city_id
+  - address
+
+- City
+- id
+- name
+  ##Flights Table
