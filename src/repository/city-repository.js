@@ -1,5 +1,6 @@
 const { City } = require("../models/index");
 class CityRepository {
+  // Basic CRUD operation repository
   async createCity({ name }) {
     try {
       const city = await City.create({ name });
@@ -23,6 +24,7 @@ class CityRepository {
 
   // first which data you want to update
   async updateCity(cityId, data) {
+    // data is object {name: "Delhi"}
     try {
       const city = await City.update(data, {
         where: {
