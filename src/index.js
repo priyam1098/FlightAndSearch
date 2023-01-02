@@ -9,7 +9,7 @@ const setupAndStartServer = async () => {
   app.use(bodyparser.json());
   app.use(bodyparser.urlencoded({ extended: true }));
 
-  app.listen(PORT, () => {
+  app.listen(PORT, async () => {
     console.log(`Sever started on ${PORT}`);
     console.log(process.env.PORT);
   });
