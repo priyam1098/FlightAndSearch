@@ -6,6 +6,7 @@ class CityService {
   }
   async createCity(data) {
     try {
+      // commmnicating with repository layer
       const city = await this.cityRepository.createCity(data);
     } catch (error) {
       throw { error };
