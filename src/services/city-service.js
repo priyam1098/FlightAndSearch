@@ -1,4 +1,4 @@
-const { CityRepository } = require("../repository/city-repository");
+const CityRepository = require("../repository/city-repository");
 
 class CityService {
   constructor() {
@@ -8,6 +8,7 @@ class CityService {
     try {
       // commmnicating with repository layer
       const city = await this.cityRepository.createCity(data);
+      return city;
     } catch (error) {
       throw { error };
     }
@@ -38,3 +39,4 @@ class CityService {
     }
   }
 }
+module.exports = CityService;
