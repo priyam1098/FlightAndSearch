@@ -40,8 +40,18 @@ class CityRepository {
 
   async getCity(cityId) {
     try {
-      console.log(cityId);
+      //console.log(cityId);
       const city = await City.findByPk(cityId);
+      return city;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
+  async getAllCities() {
+    try {
+      //console.log(cityId);
+      const city = await City.findAll();
       return city;
     } catch (error) {
       throw { error };

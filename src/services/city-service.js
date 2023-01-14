@@ -6,7 +6,7 @@ class CityService {
   }
   async createCity(data) {
     try {
-      // commmnicating with repository layer
+      // communicating with repository layer
       const city = await this.cityRepository.createCity(data);
       return city;
     } catch (error) {
@@ -34,6 +34,16 @@ class CityService {
     try {
       //console.log(cityId + "service");
       const city = await this.cityRepository.getCity(cityId);
+      return city;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
+  async getAllCities() {
+    try {
+      //console.log(cityId + "service");
+      const city = await this.cityRepository.getAllCities();
       return city;
     } catch (error) {
       throw { error };
