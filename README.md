@@ -52,7 +52,7 @@ Once done then in terminal do `npx sequelize db:create`
 
   - id
   - departure_city_id
-  - destination_city \_id
+  - destination_city id
 
   - airplane_id
   - departure
@@ -60,14 +60,14 @@ Once done then in terminal do `npx sequelize db:create`
   - flight number
   - Airport_id
 
-- Airport
+- Airport (airport belogns a city)
 
   - id
   - name
   - city_id
   - address
 
-- City
+- City (city has many airpot)
 - id
 - name
   ##Flights Table
