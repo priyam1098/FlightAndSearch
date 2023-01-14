@@ -71,3 +71,20 @@ Once done then in terminal do `npx sequelize db:create`
 - id
 - name
   ##Flights Table
+
+  command: npx sequelize seed:generate --name add-airports
+  npx sequelize db:seed:all
+  npx sequelize seed:generate --name add-airplanes
+  include query for include other table data as well
+  sequelize.sync --> db level sync
+  db.sequelize.sync({alter:true})
+  some eg :
+    <!-- const city = await City.findOne({
+        where: {
+          id: 21,
+        },
+      });
+      const airports = await city.getAirports();
+      console.log(airports); -->
+
+  when seed values seeders need all values

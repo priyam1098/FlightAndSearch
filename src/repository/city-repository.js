@@ -2,9 +2,15 @@ const { City } = require("../models/index");
 const { Op } = require("sequelize");
 class CityRepository {
   // Basic CRUD operation repository
-  async createCity({ name }) {
+  async createCity(data) {
     try {
-      const city = await City.create({ name });
+      if (data.constructor === Array) {
+        // Will create rows in bulk
+        const city = await City.bulkCreate(data, { returning: true });
+        return city;
+      }
+      //if only single entry(name:....) Will create single rows
+      const city = await City.create({ name: data.name });
       return city;
     } catch (error) {
       throw { error };
