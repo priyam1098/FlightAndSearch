@@ -4,6 +4,7 @@ const { PORT } = require("./config/serverConfig");
 
 const ApiRoutes = require("./routes/index");
 const setupAndStartServer = async () => {
+  //made async bcz of db connection for later
   //create server object
   const app = express();
   //const PORT = 3000;

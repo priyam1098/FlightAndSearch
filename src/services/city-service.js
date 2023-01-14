@@ -40,10 +40,12 @@ class CityService {
     }
   }
 
-  async getAllCities() {
+  async getAllCities(filter) {
     try {
       //console.log(cityId + "service");
-      const city = await this.cityRepository.getAllCities();
+      const city = await this.cityRepository.getAllCities({
+        name: filter.name, //create name obj and pass filter.name
+      });
       return city;
     } catch (error) {
       throw { error };
