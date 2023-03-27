@@ -11,7 +11,7 @@ const setupAndStartServer = async () => {
   //const PORT = 3000;
   app.use(bodyparser.json());
   app.use(bodyparser.urlencoded({ extended: true }));
-  app.use("/api", ApiRoutes);
+  app.use("/flightsandsearchservice/api", ApiRoutes);
   app.listen(PORT, async () => {
     console.log(`Sever started on ${PORT}`);
     // if (SYNC_DB) {
